@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iTimer_Komarov_Krasyuk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMR-zj-jyo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackgroundForrestGump" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-GE-S2Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKx-zx-uPQ">
+                                <rect key="frame" x="0.0" y="254" width="207" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.rectangle.fill" catalog="system" title="Lap"/>
+                                <connections>
+                                    <action selector="lapAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dV-f4-lID"/>
+                                    <action selector="lapResetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7XD-ZU-YKp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21y-0K-OzB">
+                                <rect key="frame" x="207" y="254" width="207" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system" title="Start"/>
+                                <connections>
+                                    <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQg-wb-Yd1"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hJu-qj-jGy">
+                                <rect key="frame" x="50" y="301" width="314" height="507"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="N0b-nd-q56">
+                                        <rect key="frame" x="0.0" y="44.5" width="314" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N0b-nd-q56" id="bSa-VO-NGE">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-oa-IyL">
+                                <rect key="frame" x="157" y="129" width="100" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q3g-ez-JJY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kKx-zx-uPQ" firstAttribute="leading" secondItem="Q3g-ez-JJY" secondAttribute="leading" id="5l3-pC-0cq"/>
+                            <constraint firstItem="kKx-zx-uPQ" firstAttribute="width" secondItem="21y-0K-OzB" secondAttribute="width" id="AGv-Po-nav"/>
+                            <constraint firstItem="Q3g-ez-JJY" firstAttribute="trailing" secondItem="21y-0K-OzB" secondAttribute="trailing" id="CQe-va-F8W"/>
+                            <constraint firstItem="kKx-zx-uPQ" firstAttribute="top" secondItem="J4M-oa-IyL" secondAttribute="bottom" constant="89" id="Cyr-Dk-Gtq"/>
+                            <constraint firstItem="J4M-oa-IyL" firstAttribute="top" secondItem="Q3g-ez-JJY" secondAttribute="top" constant="85" id="KuP-EX-W6M"/>
+                            <constraint firstItem="J4M-oa-IyL" firstAttribute="leading" secondItem="Q3g-ez-JJY" secondAttribute="leading" constant="157" id="Ubz-cV-Opo"/>
+                            <constraint firstItem="Q3g-ez-JJY" firstAttribute="trailing" secondItem="J4M-oa-IyL" secondAttribute="trailing" constant="157" id="pxH-ZU-6J1"/>
+                            <constraint firstItem="21y-0K-OzB" firstAttribute="leading" secondItem="kKx-zx-uPQ" secondAttribute="trailing" id="qnR-u4-Yoq"/>
+                            <constraint firstItem="21y-0K-OzB" firstAttribute="top" secondItem="J4M-oa-IyL" secondAttribute="bottom" constant="89" id="yyR-Qd-iCT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lapResetButton" destination="kKx-zx-uPQ" id="wz3-C8-uk2"/>
+                        <outlet property="startStopButton" destination="21y-0K-OzB" id="WPr-DW-WSq"/>
+                        <outlet property="table" destination="hJu-qj-jGy" id="fOT-32-81a"/>
+                        <outlet property="timerLabel" destination="J4M-oa-IyL" id="HVk-UR-bhR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundForrestGump" width="390" height="844"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
